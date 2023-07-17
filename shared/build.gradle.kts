@@ -2,6 +2,8 @@ plugins {
     kotlin("multiplatform")
     kotlin("native.cocoapods")
     id("com.android.library")
+    kotlin("plugin.serialization") version Deps.kotlinVersion
+    id("com.squareup.sqldelight")
 }
 
 @OptIn(org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi::class)
@@ -34,11 +36,23 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 //put your multiplatform dependencies here
+                implementation(Deps.ktorCore)
+                implementation(Deps.ktorSerialization)
+                implementation(Deps.ktorSerializationJson)
+                implementation(Deps.sqlDelightRuntime)
+                implementation(Deps.sqlDelightCoroutinesExtensions)
+                implementation(Deps.kotlinDateTime)
             }
         }
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test"))
+            }
+        }
+        val androidMain by getting {
+            dependencies {
+                implementation(Deps.ktorAndroid)
+                implementation(Deps.sqlDelightAndroidDriver)
             }
         }
     }
