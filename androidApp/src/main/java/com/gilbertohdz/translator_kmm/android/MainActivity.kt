@@ -17,7 +17,9 @@ import androidx.navigation.compose.rememberNavController
 import com.gilbertohdz.translator_kmm.android.core.presentation.Routes
 import com.gilbertohdz.translator_kmm.android.translate.presentation.AndroidTranslateViewModel
 import com.gilbertohdz.translator_kmm.android.translate.presentation.TranslateScreen
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

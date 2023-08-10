@@ -24,7 +24,7 @@ object Deps {
   const val kotlinDateTime = "org.jetbrains.kotlinx:kotlinx-datetime:$dateTimeVersion"
 
   // HILT
-  private const val hiltVersion = "2.42"
+  private const val hiltVersion = "2.45"
   private const val hiltCompilerVersion = "1.0.0"
   const val hiltAndroid = "com.google.dagger:hilt-android:$hiltVersion"
   const val hiltAndroidCompiler = "com.google.dagger:hilt-android-compiler:$hiltVersion"
@@ -46,13 +46,13 @@ object Deps {
   private const val gradleVersion = "7.2.2"
   const val androidBuildTools = "com.android.tools.build:gradle:$gradleVersion"
 
-  private const val sqlDelightGradleVersion = "1.5.3"
+  private const val sqlDelightGradleVersion = "1.5.5"
   const val sqlDelightGradlePlugin = "com.squareup.sqldelight:gradle-plugin:$sqlDelightGradleVersion"
 
   const val hiltGradlePlugin = "com.google.dagger:hilt-android-gradle-plugin:$hiltVersion"
 
   // SQLDELIGHT
-  private const val sqlDelightVersion = "1.5.4"
+  private const val sqlDelightVersion = "1.5.5"
   const val sqlDelightRuntime = "com.squareup.sqldelight:runtime:$sqlDelightVersion"
   const val sqlDelightAndroidDriver = "com.squareup.sqldelight:android-driver:$sqlDelightVersion"
   const val sqlDelightNativeDriver = "com.squareup.sqldelight:native-driver:$sqlDelightVersion"
