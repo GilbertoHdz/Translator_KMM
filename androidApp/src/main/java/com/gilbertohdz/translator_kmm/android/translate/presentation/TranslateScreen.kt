@@ -2,6 +2,7 @@ package com.gilbertohdz.translator_kmm.android.translate.presentation
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -39,7 +40,8 @@ fun TranslateScreen(
         Row(
           modifier = Modifier
             .fillMaxWidth(),
-          verticalAlignment = Alignment.CenterVertically
+          verticalAlignment = Alignment.CenterVertically,
+          horizontalArrangement = Arrangement.SpaceBetween
         ) {
 
           // From Language
@@ -58,14 +60,16 @@ fun TranslateScreen(
           )
 
           // Swap button
+          Spacer(modifier = Modifier.weight(1f))
           SwapLanguagesButton(onClick = {
             onEvent(TranslateEvent.SwapLanguages)
           })
+          Spacer(modifier = Modifier.weight(1f))
 
           // To Language
           LanguageDropDown(
-            language = state.fromLanguage,
-            isOpen = state.isChoosingFromLanguage,
+            language = state.toLanguage,
+            isOpen = state.isChoosingToLanguage,
             onClick = {
               onEvent(TranslateEvent.OpenToLanguageDropDown)
             },
