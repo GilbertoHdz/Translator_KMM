@@ -6,10 +6,15 @@ struct ContentView: View {
   private let appModule = AppModule()
 
 	var body: some View {
-    TranslateScreen(
-      historyDateSource: appModule.historyDataSource,
-      translateUseCase: appModule.translateUseCase
-    )
+    ZStack {
+      Color.background
+        .ignoresSafeArea() // Override default DarkTheme from iOs, and make a better dark theme
+      
+      TranslateScreen(
+        historyDateSource: appModule.historyDataSource,
+        translateUseCase: appModule.translateUseCase
+      )
+    }
 	}
 }
 
