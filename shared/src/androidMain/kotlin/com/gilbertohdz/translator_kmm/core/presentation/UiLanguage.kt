@@ -5,7 +5,7 @@ import com.gilbertohdz.translator_kmm.R
 import com.gilbertohdz.translator_kmm.core.domain.language.Language
 import java.util.Locale
 
-actual class UiLanguage(
+actual data class UiLanguage( // Necessary change to data class, sin in test the class will compare object and not values
   @DrawableRes val drawableRes: Int,
   actual val language: Language
 ) {
