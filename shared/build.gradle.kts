@@ -47,6 +47,8 @@ kotlin {
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test"))
+                implementation(Deps.assertK)
+                implementation(Deps.turbine)
             }
         }
         val androidMain by getting {
